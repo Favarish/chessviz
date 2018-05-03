@@ -3,7 +3,7 @@ BIN_FLDR=bin/
 TRPO=binFldr buildFldr
 
 all: $(TRPO) ./bin/main
-	./bin/main
+	
 
 bin/main: ./build/create.o ./build/moving.o ./build/main.o
 	g++ -Werror ./build/create.o ./build/moving.o ./build/main.o -o ./bin/main
@@ -23,5 +23,7 @@ binFldr:
 buildFldr:
 	[ -d $(BUILD_FLDR) ] || mkdir $(BUILD_FLDR)
 
+.PHONY: clean
+
 clean:
-	rm -f obj/*.o
+	rm -rf build/*.o
