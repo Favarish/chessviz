@@ -6,7 +6,7 @@ CC = gcc
 OBJ = $(CC) -c $< -o $@ $(CFLAGS)
 MKDIR_BUILD = mkdir -p build/src 
 
-all: $(TRPO) ./bin/main ./bin/chess_test.exe
+all: $(TRPO) ./bin/main 
 	
 bin/chess_test.exe: ./build/main_test.o ./build/create.o ./build/moving.o ./build/main.o 
 	mkdir -p bin
