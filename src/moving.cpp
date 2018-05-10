@@ -26,6 +26,7 @@ int friend_or_foe(int position2_1, int position2_2)
 		std::cout << "На своих пошел?!" << std::endl;
 		return -1;
 	}
+	else return 0;
 }
 
 void moving_a_shape(int i, int j, int position2_1, int position2_2)
